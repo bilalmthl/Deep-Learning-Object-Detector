@@ -12,7 +12,3 @@ Deployment is handled via a **Flask REST API** running on the Raspberry Pi.
 - **Robust Generalization**: Data augmentation for lighting, orientation, and cluttered scenes.
 - **Deployment**: Flask API for real-time predictions; integrates with Pi LCD display.
 - **Test Accuracy**: 98% across validation datasets.
-
----
-
-## 📂 Repository Structure
