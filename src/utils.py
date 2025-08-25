@@ -4,14 +4,14 @@ import torch
 import torch.nn as nn
 from torchvision import models, transforms as T
 
-# --- Class reader ---
+# Class reader
 def read_classes(path):
     if path and os.path.exists(path):
         with open(path, "r") as f:
             return [ln.strip() for ln in f if ln.strip()]
     return ["apples", "bananas", "oranges", "none"]
 
-# --- Transform ---
+# Transform
 def make_transform():
     return T.Compose([
         T.Resize(256),
@@ -21,7 +21,7 @@ def make_transform():
                     std=[0.229, 0.224, 0.225]),
     ])
 
-# --- Model builder ---
+# Model builder
 def build_model(num_classes):
     m = models.resnet18(weights=None)
     m.fc = nn.Linear(m.fc.in_features, num_classes)

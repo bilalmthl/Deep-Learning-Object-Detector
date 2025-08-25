@@ -19,6 +19,7 @@ def predict_pil(img):
     idx = probs.argmax()
     return CLASSES[idx], probs
 
+# Health check
 @app.route("/ping")
 def ping():
     return jsonify(ok=True)
@@ -36,6 +37,7 @@ def predict():
         probs={c: float(probs[i]) for i, c in enumerate(CLASSES)}
     )
 
+# Load model
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", default="artifacts/best_model.pth")

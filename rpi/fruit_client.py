@@ -3,12 +3,12 @@ from pathlib import Path
 import RPi.GPIO as GPIO
 from RPLCD.i2c import CharLCD
 
-# --- Config ---
-SWITCH_PIN = 17   # BCM pin for your rocker
-SERVER_URL = "http://10.0.0.107:8000/predict"   # <-- replace with your PC IP + port
+# Config
+SWITCH_PIN = 17   
+SERVER_URL = "http://10.0.0.107:8000/predict"   
 IMG_PATH = Path("/home/bilal/capture.jpg")
 
-# LCD setup (16x2)
+# LCD setup
 lcd = CharLCD('PCF8574', 0x27, cols=16, rows=2)
 
 def lcd_message(line1, line2=""):

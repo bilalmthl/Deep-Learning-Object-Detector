@@ -17,7 +17,7 @@ def main():
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    # --- Dataset ---
+    # Dataset 
     transform = T.Compose([
         T.Resize((224, 224)),
         T.ToTensor(),
@@ -30,7 +30,7 @@ def main():
     train_loader = DataLoader(train_ds, batch_size=args.batch, shuffle=True)
     val_loader   = DataLoader(val_ds, batch_size=args.batch)
 
-    # --- Model ---
+    # Model
     model = build_model(num_classes=len(train_ds.classes)).to(device)
     opt = Adam(model.parameters(), lr=args.lr)
     loss_fn = nn.CrossEntropyLoss()
@@ -50,7 +50,7 @@ def main():
             opt.step()
             total_loss += loss.item()
 
-        # --- Validation ---
+        # Validation
         model.eval()
         correct, total = 0, 0
         with torch.no_grad():
