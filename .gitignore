@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_save
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
+*.tmp
+*.swp
+
+# Model artifacts
+artifacts/*.pth
+artifacts/*.pt
+artifacts/*.ckpt
+artifacts/*.onnx
+
+# Datasets
+dataset_ready/
+quarantine_bad_images/
+samples/
+
+# IDE configs
+.vscode/
+.idea/
+
+# Flask cache
+instance/
+*.db
+*.sqlite3
+
+# Other
+*.tar
+*.zip
