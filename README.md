@@ -1,6 +1,6 @@
-# 🍎🍌🍊 Fruit Object Detector (CNN + Raspberry Pi)
+# 🍎🍌🍊 Object Detector (CNN + Raspberry Pi)
 
-A **Convolutional Neural Network (CNN)** built with **PyTorch** to classify fruits (apples, bananas, oranges, none) using images captured by a **Raspberry Pi Camera Module**.  
+A **Convolutional Neural Network (CNN)** built with **PyTorch** to classify objects using images captured by a **Raspberry Pi Camera Module**.  
 The model was trained on diverse conditions (lighting, angle, ripeness, cluttered backgrounds) and achieved **98% test accuracy**.  
 Deployment is handled via a **Flask REST API** running on the Raspberry Pi.
 
